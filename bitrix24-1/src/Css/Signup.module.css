@@ -1,0 +1,42 @@
+.sec1{
+background-image: url("https://www.intellect.codes/wp-content/uploads/2021/08/Bitrix24.png");
+height: 50rem;
+width: 55rem;
+}
+.sec2{
+ margin-top: 5rem;
+ display: flex;
+justify-content: center;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+width: 69rem;
+height: 45rem;
+
+
+}
+.container{
+   display: flex;
+   justify-content: space-between;
+    margin-top: 5rem;
+ 
+}
+.sec2 form input{
+     height: 5rem;
+     width: 30rem;
+     border: 0.1rem solid grey;
+     
+     font-size: 2rem;
+     margin-top: 4rem;
+     margin-left: 13rem;
+
+}
+
+.sec2 div h1{
+font-size: 5rem;
+margin-left: 8rem;
+}
+.sec2 div {
+  width: 70rem;
+ margin-left:2rem;
+ padding: 2rem;
+
+}

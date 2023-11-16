@@ -1,0 +1,35 @@
+
+.secondsk div::after {
+    content: "";
+    width: 10rem;
+    height: 9rem;
+    
+    
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-1546px);
+    }
+  }
+  
+  .secondsk div {
+    display: flex;
+    margin: 0;
+    width: 7rem;
+    transform: translateX(-1546px);
+    animation: scroll 30s infinite linear;
+  }
+  
+  
+  .imgone {
+    height: 8rem;
+   
+  }
+  .secondsk {
+    display: flex;
+    justify-content: space-between;
+  }
+  

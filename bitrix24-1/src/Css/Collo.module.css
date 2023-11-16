@@ -1,0 +1,78 @@
+.halfSec{
+
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.halfSec div{
+   width: 45rem;
+} 
+.halfSec1{
+
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.halfSec1 div{
+   width: 55rem;
+} 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: "Jost",sans-serif;
+ }
+ html{
+     font-size: 62.5%;
+ }
+ .boxer{
+    margin-top: 5rem;
+    height: 15rem;
+
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2rem;
+    width: 100rem;
+ }
+ .boxer div{
+    font-size: 2.5rem;
+    text-align: center;
+    color:#3fc0f0;
+ 
+ }
+ .box{
+    display: flex;
+    justify-content: center;
+    
+ }
+ .btn{
+    display: flex;
+    justify-content: center;
+ }
+ .btn div button {
+    margin: 1rem;
+    height: 3.8rem;
+     border-radius: 1rem;
+     border: 0.1rem solid white;
+     
+ }
+ .btn div{
+    margin-top: 2rem;
+ }
+ .fonts{
+    font-size: 2rem;
+    font-weight: 1000;
+ }
+ .para{
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+ }
+ .biimg{
+    height: 40rem;
+    width: 55rem;
+ }
+ .divmar{
+    margin-top: 4rem;
+ }
