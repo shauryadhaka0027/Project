@@ -29,4 +29,18 @@ Leverage task automation to streamline repetitive processes. Focus on high-value
 
 #navbar middle image
 
-![navbar2](https://github.com/shauryadhaka0027/Project/assets/138813918/3b294713-3c50-4ba2-b7a2-e7776c7eda30)
+
+
+
+
+
+![signup](https://github.com/shauryadhaka0027/Project/assets/138813918/5db4707f-cf86-4776-8448-326c2ab67557)
+![tasks](https://github.com/shauryadhaka0027/Project/assets/138813918/566f90d5-aeef-484f-bf18-fdf8026ee2bf)
+![add todos and deleted](https://github.com/shauryadhaka0027/Project/assets/138813918/7f371be3-6b2a-4aba-bbba-12039941235a)
+
+![scrolling bar](https://github.com/shauryadhaka0027/Project/assets/138813918/bdf40f56-3c3d-4019-9f5b-9e9a8c2b62a9)
+![addtask](https://github.com/shauryadhaka0027/Project/assets/138813918/64c80c05-bb1a-4132-b8db-860b943dc5e9)
+
+![bitrix](https://github.com/shauryadhaka0027/Project/assets/138813918/be3343ae-4125-4523-add9-efe2e202a9f9)
+![dashboard](https://github.com/shauryadhaka0027/Project/assets/138813918/c0f7fba6-5188-4628-8dbf-f409f5d4dde5)
+
