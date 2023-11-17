@@ -29,6 +29,9 @@ height: 45rem;
      margin-left: 13rem;
 
 }
+.sec2 form input :hover{
+     cursor: pointer;
+}
 
 .sec2 div h1{
 font-size: 5rem;

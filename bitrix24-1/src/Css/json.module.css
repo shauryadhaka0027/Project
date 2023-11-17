@@ -1,0 +1,38 @@
+.Add div{
+    color: black;
+    background-color: aliceblue;
+    
+  
+}
+.Add div input {
+    border: 1px solid rgb(7, 7, 7);
+    width: 30rem;
+    height: 3rem;
+    margin: 2rem;
+}
+label{
+    font-size: 2rem;
+}
+.Add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 35rem;
+    margin-top: 10rem;
+
+}
+.btnn{
+    background-color: #bdf300;
+    color: black;
+    width: 30rem;
+    height: 4rem;
+margin: 1rem;
+}
+.todo1{
+    margin-top: 5rem;
+}
+h1{
+    font-size: 3rem;
+    text-align: center;
+}

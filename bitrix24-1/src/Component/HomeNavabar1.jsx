@@ -1,31 +1,37 @@
+import { Text, Flex, Tabs, TabList, TabPanels, Tab, TabPanel, Stack ,Image} from '@chakra-ui/react';
+import { ListItem, UnorderedList } from '@chakra-ui/react';
+import styles from '../Css/HomeNavabar1.module.css';
 
-import {Text, Flex,Tabs, TabList, TabPanels, Tab, TabPanel,Stack, Center} from '@chakra-ui/react'
-import {
-  ListItem,
-  UnorderedList,
-} from '@chakra-ui/react'
-
-import styles from '../Css/HomeNavabar1.module.css'
-export default function HomeNavbar1(){
-  return <>
-  
-  
-  <Tabs className={styles.app}>
-  <Stack  mt={100}>
-  <Text textAlign="center" fontSize='5xl'>Bitrix24. Your ultimate workspace.</Text>
-
-</Stack>
-<TabList  ml={100}>
-  <Tab className={styles.tab} color="blue.300" fontSize={20}>CRM</Tab>
-  <Tab className={styles.tab} color="blue.300" fontSize={20}>Collaboration</Tab>
-  <Tab className={styles.tab} color="blue.300" fontSize={20} >Task & Projects</Tab>
-  <Tab className={styles.tab} color="blue.300" fontSize={20}>Sites & Stores </Tab>
-  <Tab className={styles.tab} color="blue.300" fontSize={20}>HR & Automation</Tab>
-</TabList>
-<Flex justifyContent="space-around">
-<TabPanels ml={100}>
-  <TabPanel>
-  <UnorderedList  fontSize={23} p={10}  >
+export default function HomeNavbar1() {
+  return (
+    <>
+      <Tabs className={styles.app}>
+        <Stack mt={{ base: 20, md: 100 }}>
+          <Text textAlign="center" fontSize={{ base: '3xl', md: '5xl' }}>
+            Bitrix24. Your ultimate workspace.
+          </Text>
+        </Stack>
+        <TabList ml={{ base: 0, md: 100 }}>
+          <Tab className={styles.tab} color="blue.300" fontSize={{ base: '18px', md: '40px', lg: '56px' }}>
+            CRM
+          </Tab>
+          <Tab className={styles.tab} color="blue.300" fontSize={{ base: '18px', md: '40px', lg: '56px' }}>
+            Collaboration
+          </Tab>
+          <Tab className={styles.tab} color="blue.300" fontSize={{ base: '18px', md: '40px', lg: '56px' }}>
+            Task & Projects
+          </Tab>
+          <Tab className={styles.tab} color="blue.300" fontSize={{ base: '18px', md: '40px', lg: '56px' }}>
+            Sites & Stores
+          </Tab>
+          <Tab className={styles.tab} color="blue.300" fontSize={{ base: '18px', md: '40px', lg: '56px' }}>
+            HR & Automation
+          </Tab>
+        </TabList>
+        <Flex justifyContent="space-around" >
+          <TabPanels ml={{ base: 0, md: 100 }}>
+          <TabPanel>
+  <UnorderedList  fontSize={15} p={10}  >
   <ListItem>Leads,Deals,Contacts,Companies</ListItem>
   <ListItem>Quotes,Invoices</ListItem>
   <ListItem>Online payments</ListItem>
@@ -37,7 +43,7 @@ export default function HomeNavbar1(){
   </UnorderedList>
   </TabPanel>
   <TabPanel>
-  <UnorderedList   fontSize={23} p={10} >
+  <UnorderedList   fontSize={15} p={10} >
   <ListItem> Chats & video calls</ListItem>
   <ListItem>Online meetings</ListItem>
   <ListItem>Feed</ListItem>
@@ -51,7 +57,7 @@ export default function HomeNavbar1(){
   
   </TabPanel>
   <TabPanel>
-   <UnorderedList   fontSize={23} p={10} >
+   <UnorderedList   fontSize={15} p={10} >
   <ListItem>Tasks</ListItem>
   <ListItem>Projects</ListItem>
   <ListItem>Gantt chart</ListItem>
@@ -64,7 +70,7 @@ export default function HomeNavbar1(){
    </UnorderedList>
   </TabPanel>
    <TabPanel>
-  <UnorderedList     fontSize={23} p={10} >
+  <UnorderedList     fontSize={15} p={10} >
     
    <ListItem>Free website builder</ListItem>
    <ListItem>Online store        </ListItem>
@@ -77,7 +83,7 @@ export default function HomeNavbar1(){
   </UnorderedList>
   </TabPanel>
    <TabPanel>
-    <UnorderedList     fontSize={23} p={10} >
+    <UnorderedList     fontSize={15} p={10} >
     <ListItem>Employee directory </ListItem>
     <ListItem>Worktime tracking & reports </ListItem>
     <ListItem>Absence management  </ListItem>
@@ -90,11 +96,14 @@ export default function HomeNavbar1(){
     
     </UnorderedList>
   </TabPanel>
-  
-</TabPanels>
-<img  className={styles.img} src="https://www.bitrix24.in/upload/optimizer/converted/images/content_en/screens/main/header_banner/tasks.1366w.png.webp?1698768293000" alt="" />
-</Flex>
-</Tabs>
-
-  </>
+          </TabPanels>
+          <Image h={230}  mt={10} w={750}
+            
+            src="https://www.bitrix24.in/upload/optimizer/converted/images/content_en/screens/main/header_banner/tasks.1366w.png.webp?1698768293000"
+            alt=""
+          />
+        </Flex>
+      </Tabs>
+    </>
+  );
 }

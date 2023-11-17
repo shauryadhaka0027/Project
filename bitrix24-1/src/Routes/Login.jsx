@@ -24,6 +24,7 @@ const Login = () => {
         } else {
           alert("please sign up")
         }
+        reset();
       };
       if(isAuth){
         return <Navigate to="/dashboard"/>

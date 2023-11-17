@@ -11,6 +11,7 @@ import Home from "./Home.jsx"
 import Signup from "./Signup.jsx"
 import Login from "./Login.jsx"
 import TaskAndMangement from "./TaskAndMangement.jsx"
+import Allfile from "../json/Allfile.jsx"
 
 
 
@@ -27,11 +28,13 @@ export default function AllRoutes(){
         <Route  path="/Blogs" element={<Blogs />} />
         <Route  path="/App" element={<Apps1 />} />
         <Route  path="/Partner" element={<Partner />} />
-        <Route  path="/Search" element={<Search/>} />
+        {/* <Route  path="/Search" element={<Search/>} /> */}
         <Route  path="/" element={<Home/>} />
         <Route path="/Signup" element={<Signup/>}/>
         <Route path="/Login" element={<Login/>}/>
         <Route path="/dashboard" element={<TaskAndMangement/>}/>
+        <Route path="/newtask" element={<Allfile/>}/>
+        
         
 
       </Routes>

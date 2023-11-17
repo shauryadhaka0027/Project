@@ -5,17 +5,47 @@
  import { IoIosSearch } from "react-icons/io";
  import { FiAlignJustify } from "react-icons/fi";
 import { useState } from "react";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+  Button
+} from '@chakra-ui/react'
   
   export default function Navbar(){
     const [show,setShow]=useState(false)
     return <>
      <nav className={styles.nav}>
     <div className={styles.logo} >
-    <div className={styles.mobileHam}><FiAlignJustify /></div>
+    <div className={styles.mobileHam}>
+    
+    <Menu>
+  <MenuButton as={Button} rightIcon={<FiAlignJustify />}>
+    
+  </MenuButton>
+  <MenuList>
+    <MenuItem><Link className={styles.link}   to="/Product">PRODUCT</Link></MenuItem>
+    <MenuItem><Link className={styles.link}  to="/Pricing">PRICING</Link></MenuItem>
+    <MenuItem><Link className={styles.link}  to="/solution">SOLUTIONS</Link></MenuItem>
+    <MenuItem><Link className={styles.link}  to="/App">APP</Link></MenuItem>
+    <MenuItem><Link className={styles.link}  to="/Blogs">BLOGS</Link></MenuItem>
+  </MenuList>
+</Menu>
+   
+    
+    
+    
+    
+    
+    </div>
     <div>
     <Link to="/"> <img src="https://logowik.com/content/uploads/images/bitrix241512.jpg" alt="" /></Link>
     </div>
-    
    
         
 
@@ -35,7 +65,7 @@ import { useState } from "react";
     </div>
    
     <div className={styles.button} >
-    <div className={styles.search}><Link to="Search"><IoIosSearch/></Link></div>
+    <div className={styles.search}><IoIosSearch/></div>
     <button className={styles.btnsld}><Link to="/Signup"> START FOR FREE</Link></button>
       <div className={styles.unstyled}>  <Link to="/Login"><FaUser />
         LOG IN </Link>

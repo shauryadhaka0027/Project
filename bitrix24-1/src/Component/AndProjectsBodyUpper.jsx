@@ -38,12 +38,13 @@ import {
     useDisclosure,
     VStack,
   } from "@chakra-ui/react";
-  import React, { useState } from "react";
+  import  { useContext, useState } from "react";
   import {
     MdKeyboardArrowRight,
     MdKeyboardArrowDown,
     MdKeyboardArrowUp,
   } from "react-icons/md";
+  
   import {
     AiFillStar,
     AiFillCaretDown,
@@ -54,30 +55,42 @@ import {
   import { GiElectric } from "react-icons/gi";
   import { HiDotsHorizontal, HiOutlineCloud } from "react-icons/hi";
   import { BiArrowFromLeft } from "react-icons/bi";
+import { AppContext } from "../Context/AppContextProvider";
+import { useNavigate } from "react-router-dom";
+import axios from "axios"
 
+
+   
   
-  const initTask = {
-    title: "",
-    description: "",
-    createdAt: "",
-    completed: false,
-    assigne: "",
-    author: "",
-  };
   
-  const TaskAndProjectsBodyUpper = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-    const {
-      isOpen: newTaskIsOpen,
-      onOpen: newTaskOnOpen,
-      onClose: newTaskOnClose,
-    } = useDisclosure();
-    const {
-      isOpen: automationIsOpen,
-      onOpen: automationOnOpen,
-      onClose: automationOnClose,
-    } = useDisclosure();
-    const [newTask, setNewTask] = useState(initTask);
+  
+  const AndProjectsBodyUpper = () => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const{isAuth}=useContext(AppContext)
+    const navigate=useNavigate();
+    const skd=()=>{
+      if(isAuth===true){
+        return navigate("/newtask")
+      }
+     
+    };
+    
+    
+
+    const [newTask, setNewTask] = useState("");
    
   
     const addTaskHandleChange = (e) => {
@@ -129,20 +142,17 @@ import {
           >
             Efficiency
           </Button>
-          <Menu isOpen={isOpen}>
+          <Menu>
             <MenuButton
               variant="ghost"
               borderRadius={5}
               _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
               aria-label="Courses"
               fontWeight="normal"
-              onMouseEnter={onOpen}
-              onMouseLeave={onClose}
+              
             >
               <Button
-                rightIcon={
-                  isOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />
-                }
+              
                 bg={"transparent"}
                 color={"#545c6a"}
                 _hover={{ bg: "transparent", color: "#545c6a" }}
@@ -150,7 +160,7 @@ import {
                 More
               </Button>
             </MenuButton>
-            <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
+            <MenuList >
               <MenuItem>
                 <Button
                   rightIcon={<BiArrowFromLeft />}
@@ -282,13 +292,13 @@ import {
             _hover={{ bg: "#bbed21", color: "#535c69" }}
             pl={5}
             pr={5}
-            onClick={newTaskOnOpen}
+            
           >
-            <Text borderRight={"1px solid #535c69"} pr={2}>
+            <Text borderRight={"1px solid #535c69"} pr={2} onClick={skd}>
               NEW TASK
             </Text>
           </Button>
-          <Drawer onClose={newTaskOnClose} isOpen={newTaskIsOpen} size={"xl"}>
+          <Drawer  size={"xl"}>
             <DrawerOverlay />
             <DrawerContent>
               <DrawerCloseButton
@@ -425,15 +435,15 @@ import {
                   color={"#535b69"}
                   gap={3}
                 >
-                  <Button
-                    bg={"#bbed21"}
-                    _hover={{ bg: "#bbed21" }}
-                    
-                    
-                    
-                  >
-                    ADD TASK
-                  </Button>
+              <Button
+  bgColor={"#bbed21"}
+  color={"blackAlpha.900"}
+  _hover={{ bgColor: "#bbed21" }}
+  onClick={skd}
+>
+  ADD TASK
+     </Button>
+
                   <Button
                     bg={"transparent"}
                     _hover={{ bg: "#cfd4d8" }}
@@ -445,7 +455,7 @@ import {
                   <Button
                     bg={"transparent"}
                     _hover={{ bg: "transparent" }}
-                    onClick={newTaskOnClose}
+                
                   >
                     CANCEL
                   </Button>
@@ -581,13 +591,12 @@ import {
               _hover={{ bg: "rgba(255,255,255,.3)", color: "#fff" }}
               borderRadius={"20px"}
               fontSize={"14px"}
-              onClick={automationOnOpen}
+              
             >
               Automation rules
             </Button>
             <Drawer
-              onClose={automationOnClose}
-              isOpen={automationIsOpen}
+             
               size={"lg"}
             >
               <DrawerOverlay />
@@ -750,8 +759,8 @@ import {
             />
           </Flex>
         </Flex>
-      </VStack>
+        </VStack>
     );
   };
   
-  export default TaskAndProjectsBodyUpper;
+  export default AndProjectsBodyUpper;

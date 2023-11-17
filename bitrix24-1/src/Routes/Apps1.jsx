@@ -2,6 +2,7 @@ import React from 'react'
 import {Box,Heading,Text} from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter ,Flex,Button,Image} from '@chakra-ui/react'
 import Navbar from '../Component/Navbar'
+import HomeFooter from '../Component/HomeFooter'
 
 const Apps1 = () => {
   return (
@@ -77,6 +78,9 @@ const Apps1 = () => {
 </Flex>
 
 
+   </div>
+   <div>
+    <HomeFooter/>
    </div>
    
     </div>

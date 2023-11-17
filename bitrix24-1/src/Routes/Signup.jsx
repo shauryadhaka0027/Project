@@ -7,6 +7,7 @@ import Navbar from '../Component/Navbar';
 
 const Signup = () => {
   const [state,setState]=useState({email:"",password:""})
+
   const {setUserDetail, userDetail}=useContext(AppContext)
   const handleChange = (el) => {
    
@@ -16,6 +17,7 @@ const Signup = () => {
     e.preventDefault()
     setUserDetail(state)
     console.log(userDetail)
+    reset();
     
 
   }

@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
+
 import {
   Alert,
   AlertIcon,
@@ -17,19 +20,22 @@ import {
   Tr,
   VStack,
 } from "@chakra-ui/react";
-import TaskAndProjectsBodyUpper from "./TaskAndProjectsBodyUpper";
+import AndProjectsBodyUpper from "./AndProjectsBodyUpper";
 import { RiDeleteBinFill } from "react-icons/ri";
 import { MdArrowDropDown } from "react-icons/md";
 
+
+
+
 const TaskAndProjectsBody = () => {
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(1);
+  
 
  
 
   return (
     <VStack spacing={3}>
-      <TaskAndProjectsBodyUpper />
+      <AndProjectsBodyUpper />
      
       <Table
         variant="striped"
@@ -54,6 +60,7 @@ const TaskAndProjectsBody = () => {
                     <Avatar h={"25px"} w={"25px"} />
                   
                   </Flex>
+                
                 </Td>
                 <Td>
                   <Button
